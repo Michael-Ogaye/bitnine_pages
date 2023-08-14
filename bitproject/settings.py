@@ -79,7 +79,12 @@ WSGI_APPLICATION = 'bitproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-if MODE=='dev':
+
+if MODE=='render':
+      DATABASES = {
+        "default": dj_database_url.config(default=config('DATABASE_URL'), conn_max_age=1800),
+    }
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
