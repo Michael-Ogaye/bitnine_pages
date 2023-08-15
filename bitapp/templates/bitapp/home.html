@@ -1,3 +1,5 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,40 +12,142 @@
 
 
     <style>
+         :root {
+    --primary-color: #F3F6FB;
+    --box-color: #CBCBCB;
+    --inside-card:#ECECEC;
+    --bottom-color:#1E2329;
+}
+
       body{
         font-family: 'Monda', sans-serif; 
+       
+
       }
+
+      .topa{
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--bottom-color);
+            color: white;
+            height: 3%;
+        }
+
+         .st li{
+            display: inline-block;
+
+        }
+        .left-c{
+            display: inline-block;
+            color: white;
+        }
+
+        .topa a{
+            color: white;
+            text-decoration: none;
+        }
+        .logo{
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--bottom-color);
+        }
+    .bitnin img{
+        width: 70px;
+        height: 80px;
+    }
+    .lw li a{
+        color: white;
+        text-decoration: none;
+        margin-left: 1em;
+        text-transform: uppercase;
+    }
+    .ora a{
+        color: orangered;
+    }
+    .lw a:hover{
+        color: orangered;
+
+    }
+    .lw li:last-child{
+        padding: 0.5em 0.6em;
+        background-color: blue;
+        border-radius: 0.2em;
+    }
+    .top{
+        text-align: center;
+        padding: 2em 3em;
+    }
+    .verb {
+        width: 50%;
+        text-align: center;
+        transform: translate(50%,0%);
+        margin: 1.5em 0em;
+
+
+    }
+    .verb p{
+        list-style: 1em;
+    }
+    .top ul {
+        display: flex;
+        justify-content: center;
+    }
+    .top ul li{
+       list-style: none;
+    }  
+
+    .top ul a{
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 1em 2em;
+        margin-left: 1em;
+        border-radius: .2em;
+        background-color: blue;
+    }
+
+    .top h2{
+        font-size: 2.5em;
+    }
+    .top h2 span{
+        color: orangered;
+    }
     </style>
 
 </head>
 <body>
-    <nav>
+    <nav class="topa">
         <select name="lang" id="lang">
             <option value="English">English</option>
             <option value="korea"> Korea</option>
         </select>
-        <div>
-            <a href="#Search">Search</a>
-            <a href="#contact">Contact</a>
+        <div class="lef-c">
+            <div class="middle">
+                <a href="#Search">Search</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div>
+                <ul class="st ">
+                    <li><a href="#github">Github</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="">linkedin</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">medium</a></li>
+                    
+                </ul>
+            </div>
+
         </div>
-    <ul>
-        <li><a href="#github">Github</a></li>
-        <li><a href="#">Youtube</a></li>
-        <li><a href="">linkedin</a></li>
-        <li><a href="">facebook</a></li>
-        <li><a href="">medium</a></li>
-        
-    </ul>
     </nav>
 
     <nav class="logo">
         <div class="bitnin">
-            <img src="" alt="bitnine">
-            <span>Bitnine</span>
+            <img src="{% static 'images/bitimage.png'%}" alt="bitnine">
+            
         </div>
         <div class="navigation">
-            <ul>
-                <li><a href="">Products</a></li>
+            <ul class="st lw">
+                <li class="ora"><a href="">Products</a></li>
                 <li><a href=""> Use cases</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Resources</a></li>
@@ -56,17 +160,22 @@
     </nav>
 
     <section class="top">
-        <h3>An integration of Bitnine’s DB technology and PG expertise</h3>
-        <p>
-            AgensSQL is an all-new relational DBMS based on PostgreSQL, with years of expertise
-            and knowledge accumulated through database research and development.
-
-            The enterprise package, along with AgensSQL engine, is an all-in-one solution that ensures
-            the efficiency and scalability of data management.
-
-            Get AgensSQL now for stable operation and management services at a reduced
-            maintenance cost.
-        </p>
+        <h2>Agens<span>SQL</span></h2>
+        
+        <div class="verb">
+            <h4>An integration of Bitnine’s DB technology and PG expertise</h4>
+            <p>
+                AgensSQL is an all-new relational DBMS based on PostgreSQL, with years of expertise
+                and knowledge accumulated through database research and development. <br>
+    
+                The enterprise package, along with AgensSQL engine, is an all-in-one solution that ensures
+                the efficiency and scalability of data management.
+                <br>
+    
+                Get AgensSQL now for stable operation and management services at a reduced
+                maintenance cost.
+            </p>
+        </div>
 
         <ul>
             <li><a href="#">Contact</a></li>
