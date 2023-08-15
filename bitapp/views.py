@@ -2,6 +2,7 @@
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth import authenticate, login as auth_login, logout
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 def signup_view(request):
     if request.method == 'POST':
@@ -25,7 +26,7 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 auth_login(request, user)
-                return redirect('home')  # Redirect to the appropriate URL after login
+                return redirect('home')  
             else:
                 # Invalid credentials
                 form.add_error(None, "Invalid username or password.")
@@ -38,7 +39,7 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
-
+@login_required(login_url='login')
 def home_view(request):
     return render(request,'bitapp/home.html')
 
