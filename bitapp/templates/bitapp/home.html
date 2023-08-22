@@ -283,29 +283,13 @@
   display: block;
 }
 
-.card .chat {
-  position: relative;
-  
-  color: #fff;
-  padding: 10px 20px;
-  
-  display: inline-block;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 84% 91%, 50% 75%, 0% 75%);
-}
+
 
 .card .chat i {
   margin-right: 10px;
 }
 
-/* .card .chat::before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: #007bff;
-} */
+
 
 .card .creds {
   display: flex;
@@ -316,27 +300,18 @@
 
 
 
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-  width: calc(33.33% - 20px);
-  height: 300px; /* Set a fixed height for square cards */
-  position: relative;
-  transition: transform 0.3s;
-}
+
 
 
 .card .chat {
   width: 70%;
   margin: 0 auto; /* Center the chat within the card */
-  border: 2px solid #007bff; /* Solid border */
-  padding: 10px;
+  border: 1px solid #007bff; /* Solid border */
+  padding: 1em;
   text-align: center;
   box-sizing: border-box;
   position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 84% 91%, 50% 75%, 0% 75%);
 }
 
 .card .chat::before {
@@ -545,6 +520,10 @@
 #kr{
     font-family: 'Noto Sans KR', sans-serif;
 }
+
+        .ora{
+            color:orangered;
+        }
     </style>
 
 </head>
@@ -561,7 +540,7 @@
             </div>
             <div>
                 <ul class="st ">
-                    <li><a href="#github"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#github"><i class="ora" class="fa-brands fa-github"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
                     <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
@@ -580,7 +559,7 @@
         </div>
         <div class="navigation">
             <ul class="st lw">
-                <li class="ora"><a href="">Products</a></li>
+                <li ><a class="ora" href="">Products</a></li>
                 <li><a href=""> Use cases</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Resources</a></li>
