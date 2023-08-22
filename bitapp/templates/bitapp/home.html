@@ -318,6 +318,12 @@
     align-items:center;
   
 }
+        .creds,.cent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
 
 
         .card .chat i{
@@ -325,7 +331,7 @@
             font-size:2em;
         }
 
-        i.ir{
+        .ir{
             color:grey;
             font-size:.7em;
         }
@@ -665,7 +671,11 @@
                 <div class="original">
                     <p>Data reduction</p>
                 <div class="chat">
-                    <i class="fa-solid fa-database"></i>
+                     <div class="cent">
+                       
+                          <i class="fa-solid fa-database"></i>
+                   </div>
+                   
                 </div>
                 </div>
 
@@ -680,7 +690,9 @@
                 <div class="original">
                     <p>Auditing</p>
                 <div class="chat clip-path">
-                    <i class="fa-solid fa-list-check"></i>
+                   <div class="cent">
+                        <i class="fa-solid fa-list-check"></i>
+                   </div>
                 </div>
                 </div>
 
